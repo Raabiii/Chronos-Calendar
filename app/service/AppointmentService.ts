@@ -41,6 +41,20 @@ class AppointmentService {
     this.appointments = [];
   }
 
+  public getAppointmentsForDate(date: Date): Appointment[] {
+    const appointmentsForDate: Appointment[] = [];
+    this.appointments.forEach((appointment) => {
+      if (
+        appointment.startDate.getDate() === date.getDate() &&
+        appointment.startDate.getMonth() === date.getMonth() &&
+        appointment.startDate.getFullYear() === date.getFullYear()
+      ) {
+        appointmentsForDate.push(appointment);
+      }
+    });
+    return appointmentsForDate;
+  }
+
   private sortAppointments(): void {
     this.appointments.sort(
       (a, b) => a.startDate.getTime() - b.startDate.getTime()
