@@ -31,9 +31,12 @@ class AppointmentService {
   }
 
   public deleteAppointment(id: string): void {
-    this.appointments = this.appointments.filter(
-      (appointment) => appointment.id !== id
+    const index = this.appointments.findIndex(
+      (appointment) => appointment.id === id
     );
+    if (index !== -1) {
+      this.appointments.splice(index, 1);
+    }
     this.sortAppointments();
   }
 

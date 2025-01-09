@@ -6,7 +6,7 @@ export class Appointment {
   private _allDay: boolean;
   private _repeat: boolean;
   private _description: string;
-  private _destination: string;
+  private _location: string;
   private _notification: number;
 
   constructor(
@@ -16,7 +16,7 @@ export class Appointment {
     allDay: boolean,
     repeat: boolean,
     description: string,
-    destination: string,
+    location: string,
     notification: number
   ) {
     this._id = this.generateId(); // Automatically generate the ID
@@ -26,7 +26,7 @@ export class Appointment {
     this._allDay = allDay;
     this._repeat = repeat;
     this._description = description;
-    this._destination = destination;
+    this._location = location;
     this._notification = notification;
   }
 
@@ -94,12 +94,12 @@ export class Appointment {
     this._description = value;
   }
 
-  get destination(): string {
-    return this._destination;
+  get location(): string {
+    return this._location;
   }
 
-  set destination(value: string) {
-    this._destination = value;
+  set location(value: string) {
+    this._location = value;
   }
 
   get notification(): number {

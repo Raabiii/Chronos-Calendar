@@ -6,59 +6,9 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.background,
   },
-  grid: {
-    flexDirection: "row",
-    position: "relative",
-  },
-  hourColumn: {
-    width: 70,
-    backgroundColor: Colors.background,
-  },
-  hourRow: {
-    height: 60,
-    borderBottomWidth: 1,
-    borderBottomColor: Colors.oliveGreen,
-    justifyContent: "flex-start", // Align time to the top of the row
-    paddingTop: 2,
-  },
-  hourText: {
-    fontSize: 16,
-    backgroundColor: Colors.background,
-    color: "#FFFFFF",
-    fontWeight: "bold",
-    textAlign: "center",
-    position: "absolute", // Ensure the time aligns with the grid line
-    top: -23, // Adjust the position so it aligns with the grid line
-    padding: 10,
-  },
-  appointmentsColumn: {
-    flex: 1,
-    position: "relative",
-    borderLeftWidth: 1,
-    borderColor: Colors.oliveGreen,
-    backgroundColor: Colors.background,
-  },
-  gridLine: {
-    height: 60,
-    borderBottomWidth: 1,
-    borderBottomColor: Colors.oliveGreen,
-  },
-  appointment: {
-    position: "absolute",
-    left: 10,
-    right: 10,
-    backgroundColor: "#FFFFFF",
-    borderRadius: 5,
-    padding: 5,
-  },
-  appointmentText: {
-    color: "#000000",
-    fontSize: 14,
-    fontWeight: "bold",
-  },
   topBar: {
     flexDirection: "row",
-    alignItems: "center",
+    justifyContent: "space-between",
     paddingHorizontal: 16,
     paddingVertical: 10,
     backgroundColor: Colors.oliveGreen, // Olive green for the top bar
@@ -70,39 +20,99 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     marginRight: 8,
   },
-  buttonText: {
-    color: "#FFFFFF",
-    fontWeight: "bold",
-  },
-  buttonMonth: {
-    flex: 1,
+  edit: {
     paddingVertical: 8,
     paddingHorizontal: 8,
     borderRadius: 8,
-  },
-  monthText: {
-    color: "#FFFFFF",
-    fontSize: 18,
-    fontWeight: "bold",
-  },
-  dayButton: {
-    paddingVertical: 8,
-    paddingHorizontal: 8,
-    borderRadius: 4,
-    borderWidth: 1,
-    borderColor: "#FFFFFF",
-    marginLeft: 8,
-  },
-  dayText: {
-    color: "#FFFFFF",
-    fontSize: 18,
-    fontWeight: "bold",
   },
   plusButton: {
     paddingVertical: 8,
     paddingHorizontal: 8,
     borderRadius: 8,
     marginLeft: 8,
+  },
+  buttonGroup: {
+    flexDirection: "row",
+  },
+  content: {
+    // padding: 52,
+    paddingVertical: 20,
+    // paddingBottom: 20,
+    flexDirection: "row",
+  },
+  colorBar: {
+    width: 5,
+    marginHorizontal: 35,
+    backgroundColor: Colors.darkerOliveGreen,
+  },
+  appointment: {
+    flex: 1,
+  },
+  appointmentTitle: {
+    color: "#FFFFFF",
+    fontSize: 24,
+    fontWeight: "bold",
+  },
+  appointmentText: {
+    color: "#FFFFFF",
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+  appointmentRepeat: {
+    color: "#FFFFFF",
+    fontSize: 14,
+    fontWeight: "bold",
+    fontStyle: "italic",
+  },
+  contentCalendar: {
+    padding: 20,
+    paddingTop: 0,
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  appointmentCalendar: {
+    color: "#FFFFFF",
+    fontSize: 18,
+    fontWeight: "bold",
+    paddingLeft: 20,
+    flexDirection: "row",
+  },
+  centeredView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  modalView: {
+    margin: 20,
+    backgroundColor: Colors.oliveGreen,
+    borderRadius: 20,
+    padding: 35,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  textStyle: {
+    color: "white",
+    fontWeight: "bold",
+    textAlign: "center",
+  },
+  modalTitle: {
+    color: "white",
+    marginBottom: 15,
+    textAlign: "center",
+    fontSize: 24,
+    fontWeight: "bold",
+  },
+  modalText: {
+    color: "white",
+    marginBottom: 15,
+    textAlign: "center",
   },
 });
 
