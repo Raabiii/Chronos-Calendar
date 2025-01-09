@@ -37,16 +37,6 @@ import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 const HomeScreen = ({ route, navigation }: Props) => {
   const today = new Date();
-  const appointment = new Appointment(
-    "Test",
-    new Date(today.getTime() - 2 * 60 * 60 * 1000),
-    new Date(),
-    false,
-    false,
-    "Test",
-    "Test",
-    0
-  );
   const school = new Appointment(
     "School",
     new Date(today.getFullYear(), today.getMonth(), today.getDate(), 7, 25),
@@ -58,7 +48,6 @@ const HomeScreen = ({ route, navigation }: Props) => {
     0
   );
 
-  AppointmentService.addAppointment(appointment);
   AppointmentService.addAppointment(school);
 
   const appointmentsToday = AppointmentService.getAppointmentsForDate(today);
