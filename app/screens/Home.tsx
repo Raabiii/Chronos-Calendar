@@ -67,7 +67,36 @@ const HomeScreen = ({ route, navigation }: Props) => {
         <TouchableOpacity style={styles.dayButton}>
           <Text style={styles.dayText}>{today.getDate()}</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.plusButton}>
+        <TouchableOpacity
+          style={styles.plusButton}
+          onPress={() =>
+            navigation.navigate("AddSave", {
+              add: true,
+              appointment: new Appointment(
+                "",
+                new Date(
+                  today.getFullYear(),
+                  today.getMonth(),
+                  today.getDate(),
+                  today.getHours() + 1,
+                  today.getMinutes()
+                ),
+                new Date(
+                  today.getFullYear(),
+                  today.getMonth(),
+                  today.getDate(),
+                  today.getHours() + 1,
+                  today.getMinutes() + 30
+                ),
+                false,
+                false,
+                "",
+                "",
+                0
+              ),
+            })
+          }
+        >
           <AntDesign name="plus" size={24} color="white" />
         </TouchableOpacity>
         {/* <Text style={styles.monthText}>{appointment.date}</Text> */}

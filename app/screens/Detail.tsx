@@ -14,7 +14,6 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import Entypo from "@expo/vector-icons/Entypo";
-type Props = NativeStackScreenProps<RootStackParamList, "Detail">;
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import AppointmentService from "../service/AppointmentService";
@@ -43,6 +42,8 @@ const DAYS = [
   "Friday",
   "Saturday",
 ];
+
+type Props = NativeStackScreenProps<RootStackParamList, "Detail">;
 
 const DetailScreen = ({ route, navigation }: Props) => {
   const { appointment } = route.params;
