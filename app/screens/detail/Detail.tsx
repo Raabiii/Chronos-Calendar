@@ -7,16 +7,16 @@ import {
   StatusBar,
   TouchableOpacity,
 } from "react-native";
-import { RootStackParamList } from "../index";
+import { RootStackParamList } from "../../index";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { Colors, styles } from "./style_detail";
+import styles, { Colors } from "./style_detail";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import Entypo from "@expo/vector-icons/Entypo";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import AppointmentService from "../service/AppointmentService";
+import AppointmentService from "../../service/AppointmentService";
 
 const MONTHS = [
   "January",

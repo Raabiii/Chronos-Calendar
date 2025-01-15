@@ -1,4 +1,6 @@
-export class Appointment {
+import { Identifiable } from "./Identifiable";
+
+export class Appointment implements Identifiable {
   private _id: string; // Private to prevent external modifications
   private _title: string;
   private _startDate: Date;
@@ -30,15 +32,14 @@ export class Appointment {
     this._notification = notification;
   }
 
-  // Getter for id
   get id(): string {
     return this._id;
   }
-
-  // Setter for id (private to prevent manual setting)
   set id(value: string) {
     this._id = value;
   }
+
+  // Setter for id (private to prevent manual setting)
 
   // Generate a unique ID (you can use a UUID library for production)
   private generateId(): string {

@@ -8,13 +8,12 @@ import {
   TouchableOpacity,
   Switch,
 } from "react-native";
-import { RootStackParamList } from "../index";
+import { RootStackParamList } from "../../index";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { Colors, styles } from "./style_add_save";
+import styles, { Colors } from "./style_add_save";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import AppointmentService from "../service/AppointmentService";
 import Feather from "@expo/vector-icons/Feather";
 import { ScrollView, TextInput } from "react-native-gesture-handler";
 import AntDesign from "@expo/vector-icons/AntDesign";
@@ -54,7 +53,6 @@ const AddSaveScreen = ({ route, navigation }: Props) => {
   const [modalVisible, setModalVisible] = useState(false);
 
   let type = add ? "Add" : "Save";
-  //TODO give unique key to each appointment
 
   const toggleSwitch = () => {
     setIsFullDay((previousState) => !previousState);

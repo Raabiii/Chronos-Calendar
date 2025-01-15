@@ -8,10 +8,10 @@ import {
 } from "react-native";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import AntDesign from "@expo/vector-icons/AntDesign";
-import AppointmentService from "../service/AppointmentService";
-import { Appointment } from "../model/Appointment";
-import { Colors, styles } from "./style_home";
-import { RootStackParamList } from "../index";
+import AppointmentService from "../../service/ServiceClass";
+import { Appointment } from "../../model/Appointment";
+import styles, { Colors } from "./style_home";
+import { RootStackParamList } from "../../index";
 
 type Props = NativeStackScreenProps<RootStackParamList, "Home">;
 
@@ -37,20 +37,9 @@ import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 const HomeScreen = ({ route, navigation }: Props) => {
   const today = new Date();
-  const school = new Appointment(
-    "School",
-    new Date(today.getFullYear(), today.getMonth(), today.getDate(), 7, 25),
-    new Date(today.getFullYear(), today.getMonth(), today.getDate(), 12, 45),
-    false,
-    false,
-    "Test",
-    "Test",
-    0
-  );
+  const service = new AppointmentService();
 
-  AppointmentService.addAppointment(school);
-
-  const appointmentsToday = AppointmentService.getAppointmentsForDate(today);
+  const appointmentsToday = service.getAppointmentsForDate(today);
 
   return (
     <View style={styles.container}>

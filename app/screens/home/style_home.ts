@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Colors } from "./style";
+import { Colors } from "../style";
 
 const styles = StyleSheet.create({
   container: {
@@ -58,13 +58,12 @@ const styles = StyleSheet.create({
   },
   topBar: {
     flexDirection: "row",
-    justifyContent: "space-between",
+    alignItems: "center",
     paddingHorizontal: 16,
     paddingVertical: 10,
     backgroundColor: Colors.oliveGreen, // Olive green for the top bar
   },
   button: {
-    justifyContent: "center",
     backgroundColor: Colors.darkerOliveGreen, // Slightly darker olive green for the button
     paddingVertical: 8,
     paddingHorizontal: 8,
@@ -105,43 +104,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     marginLeft: 8,
   },
-  row: {
-    width: "100%",
-    flexDirection: "row",
-    paddingRight: 15,
-    alignItems: "center",
-    backgroundColor: Colors.background,
-    borderBottomWidth: 2,
-    borderBottomColor: Colors.oliveGreen,
-  },
-  rowTime: {
-    width: "100%",
-    flexDirection: "row",
-    paddingRight: 15,
-    alignItems: "center",
-    backgroundColor: Colors.background,
-  },
-  icon: {
-    padding: 20,
-  },
-  inputTitle: {
-    color: "#FFFFFF",
-    fontSize: 24,
-    fontWeight: "bold",
-    paddingTop: 2,
-    justifyContent: "flex-start",
-  },
-  textTitle: {
-    color: "#FFFFFF",
-    fontSize: 24,
-    fontWeight: "bold",
-    paddingTop: 2,
-    justifyContent: "flex-start",
-  },
-  fullDayText: {
-    color: "#FFFFFF",
-    fontSize: 20,
-  },
 });
 
-export { Colors, styles };
+export default styles;
+export { Colors };
